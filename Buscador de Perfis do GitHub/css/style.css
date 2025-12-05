@@ -1,0 +1,166 @@
+/* Reset Básico e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Form */
+#search-form {
+    display: flex;
+}
+
+#search-input {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 5px 0 0 5px;
+    background-color: #222;
+    color: #e0e0e0;
+    outline: none;
+}
+
+#search-form button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.2s ease;
+}
+
+#search-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Card do Perfil */
+#profile-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+}
+
+.profile-info {
+    width: 100%;
+}
+
+.profile-info h2 {
+    font-size: 1.5rem;
+}
+
+.profile-info a {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Card de Erro */
+.error-card {
+    text-align: center;
+    color: #ff4d4d;
+    padding: 20px;
+}
+
+/* Responsividade */
+@media (min-width: 600px) {
+
+    body {
+        padding-top: 50px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #profile-container {
+        padding: 30px;
+    }
+
+    .profile-card {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-stats {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+}
